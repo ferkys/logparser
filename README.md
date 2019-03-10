@@ -109,7 +109,7 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
     - I'm considering that the number of hosts connected to a single server that you configure on command
       line is not so high. I'm just printing the result to the screen, but would be easy to just output the
       results to files it it's too much.
-    - Tested to repartition data on timestamp (almost ordered, so not big effort) and server (much more work
+    - Tested to repartition data on timestamp (almost ordered) and server (much more work
       and shuffle), but for this concrete report the time needed to repartition data was more that the time
       needed to get the report. Also, one of the queries needed would need a partition by host instead
       of server, so probably partitioning by timestamp is good enough.
