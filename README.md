@@ -149,4 +149,9 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
     of them to data. In this way more reports could be added just by adding new functions. Functions should have all the same signature:
     ```python
     def parse_log_new_function(client, df, timestamp):
+      '''
+        * client: dask client. Needed if developer needs to repartition, rebalance, etc.
+        * df: Read dask dataframe.
+        * timestamp: The needed time reference to process data.
+      '''
     ```
