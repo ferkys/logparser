@@ -129,8 +129,6 @@ def parse_log_dataframe(client, df, timestamp):
 
     # Distributed reading of log files
     ts_start = timestamp - seconds
-    df = dd.read_csv(location, sep=' ')
-    df.columns = ['ts', 'from', 'to']
 
     # First of all filter data we are not going to use
     df = df[(df.ts >= ts_start) & (df.ts <= timestamp)]
