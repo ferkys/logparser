@@ -129,10 +129,13 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
        to hold less data in the whole cluster, as I try to `persist` this grouped data in order to 
        not repeat operations.
        
-    Also, some more options, if running in a real cluster, could be added, like:
-    
-     - Number of workers.
+
+     
+## Improvements
+
+  - Unit Testing: I usually use `pytest` or `nose`. There are no tests implemented here. Sorry, literally out of time!
+  - Make a more real testing by using an hdfs docker image.
+  - Also, some more options, if running in a real cluster, could be added, like:
+     - Number of workers and cores to be used.
      - Maximum size for partitions (usually dask works well with 100Mb but depends on
        algorithm to be applied on it!).
-     
-   
