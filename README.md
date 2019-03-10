@@ -132,7 +132,7 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
 ## Code Modules
 
 - `config.py`: Simple library I like to use to store parameters that will be used along the code. Avoid passing 
-    more and more parameters each time you need to add functionality.
+    more and more parameters to functions each time you need to add functionality.
 - `makefake.py`: Small (and dirty) module to generate some fake data.
 - `parse`: Real things happen here. Main entry code for commands. Function `parse_log_dataframe` holds all the 
    logic for parsing data.
