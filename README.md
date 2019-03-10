@@ -129,7 +129,13 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
        to hold less data in the whole cluster, as I try to `persist` this grouped data in order to 
        not repeat operations.
        
+## Code Modules
 
+- `config.py`: Simple library I like to use to store parameters that will be used along the code. Avoid passing 
+    more and more parameters each time you need to add functionality.
+- `makefake.py`: Small (and dirty) module to generate some fake data.
+- `parse`: Real things happen here. Main entry code for commands. Function `parse_log_dataframe` holds all the 
+   logic for parsing data.
      
 ## Improvements
 
@@ -139,3 +145,8 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
      - Number of workers and cores to be used.
      - Maximum size for partitions (usually dask works well with 100Mb but depends on
        algorithm to be applied on it!).
+  - Make a list of functions to be applied on data. In this way I would just `map` on the function list and apply each one 
+    of them to data. In this way more reports could be added just by adding new functions. Functions should have all the same signature:
+    ```python
+    def parse_log_new_function(client, df, timestamp):
+    ```
