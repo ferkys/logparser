@@ -145,6 +145,7 @@ Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, L
      - Number of workers and cores to be used.
      - Maximum size for partitions (usually dask works well with 100Mb but depends on
        algorithm to be applied on it!).
+  - Better error control. At this point the program does not check that every input file has a correct format.
   - Make a list of functions to be applied on data. In this way I would just `map` on the function list and apply each one 
     of them to data. In this way more reports could be added just by adding new functions. Functions should have all the same signature:
     ```python
