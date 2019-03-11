@@ -2,6 +2,8 @@
 
 ## Install
 
+Tested in a Mac Environment. It's not guaranteed to work on Windows.
+
 Just clone the repo:
 
 ```bash
